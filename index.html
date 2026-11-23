@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos · Backoffice</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="grid3.css">
+  <link rel="stylesheet" href="productes.css">
+</head>
+<body>
+<main class="container pagina">
+
+  <!-- Capçalera de la pàgina -->
+  <div class="row cap-pagina">
+    <div class="col-8">
+      <h1>Productos</h1>
+      <p>Catálogo de sacos, mallas y big bags</p>
+    </div>
+    <div class="col-4 accions-pagina">
+      <button class="boto">Exportar</button>
+      <button class="boto boto--fosc">+ Nuevo producto</button>
+    </div>
+  </div>
+
+  <!-- Filtres -->
+  <form class="row filtres" role="search">
+    <div class="col-6"><input type="search" class="camp-form" placeholder="Buscar por nombre o SKU…" aria-label="Buscar"></div>
+    <div class="col-2"><select class="camp-form" aria-label="Categoría"><option value="">Categoría</option><option>Sacos</option><option>Mallas</option><option>Big bags</option></select></div>
+    <div class="col-2"><select class="camp-form" aria-label="Material"><option value="">Material</option><option>Rafia PP</option><option>Rafia laminada</option><option>Malla raschel</option><option>Yute</option></select></div>
+    <div class="col-2"><select class="camp-form" aria-label="Estado"><option value="">Estado</option><option>Activo</option><option>Bajo stock</option><option>Agotado</option><option>Borrador</option></select></div>
+  </form>
+
+  <!-- Taula -->
+  <div class="row">
+    <div class="col-12">
+      <div class="caixa-taula">
+        <table class="taula">
+          <caption class="ocult">Listado de productos</caption>
+          <thead>
+            <tr>
+              <th scope="col">Foto</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Material</th>
+              <th scope="col">Medidas</th>
+              <th scope="col" class="opt">Gramaje</th>
+              <th scope="col">Color</th>
+              <th scope="col" class="num">Stock</th>
+              <th scope="col" class="num">Precio</th>
+              <th scope="col">Estado</th>
+              <th scope="col" class="opt">Actualizado</th>
+              <th scope="col" class="num">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Saco rafia blanco 50 kg</strong><small>SR-5090-BL</small></td>
+              <td data-label="Categoría">Sacos</td>
+              <td data-label="Material">Rafia PP</td>
+              <td data-label="Medidas">60×90 cm</td>
+              <td data-label="Gramaje" class="opt">90 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#FFFFFF"></span>Blanco</td>
+              <td data-label="Stock" class="num">12.400</td>
+              <td data-label="Precio" class="num c-preu">0,38 €</td>
+              <td class="c-estat"><span class="badge badge--actiu">Activo</span></td>
+              <td data-label="Actualizado" class="opt">Hoy</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Saco rafia laminado</strong><small>SR-5595-LM</small></td>
+              <td data-label="Categoría">Sacos</td>
+              <td data-label="Material">Rafia laminada</td>
+              <td data-label="Medidas">55×95 cm</td>
+              <td data-label="Gramaje" class="opt">110 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#D9C7A7"></span>Beige</td>
+              <td data-label="Stock" class="num">3.250</td>
+              <td data-label="Precio" class="num c-preu">0,52 €</td>
+              <td class="c-estat"><span class="badge badge--actiu">Activo</span></td>
+              <td data-label="Actualizado" class="opt">Ayer</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Big bag 1 t con asas</strong><small>BB-9090-ST</small></td>
+              <td data-label="Categoría">Big bags</td>
+              <td data-label="Material">PP tejido</td>
+              <td data-label="Medidas">90×90×110</td>
+              <td data-label="Gramaje" class="opt">180 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#FFFFFF"></span>Blanco</td>
+              <td data-label="Stock" class="num estoc-baix">420</td>
+              <td data-label="Precio" class="num c-preu">6,90 €</td>
+              <td class="c-estat"><span class="badge badge--baix">Bajo stock</span></td>
+              <td data-label="Actualizado" class="opt">17 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Malla patata 25 kg</strong><small>SM-4580-RJ</small></td>
+              <td data-label="Categoría">Mallas</td>
+              <td data-label="Material">Malla raschel</td>
+              <td data-label="Medidas">45×80 cm</td>
+              <td data-label="Gramaje" class="opt">35 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#B4473A"></span>Rojo</td>
+              <td data-label="Stock" class="num">18.900</td>
+              <td data-label="Precio" class="num c-preu">0,21 €</td>
+              <td class="c-estat"><span class="badge badge--actiu">Activo</span></td>
+              <td data-label="Actualizado" class="opt">16 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Saco arpillera de yute</strong><small>SY-6010-NT</small></td>
+              <td data-label="Categoría">Sacos</td>
+              <td data-label="Material">Yute</td>
+              <td data-label="Medidas">60×100 cm</td>
+              <td data-label="Gramaje" class="opt">300 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#C2A878"></span>Natural</td>
+              <td data-label="Stock" class="num estoc-baix">0</td>
+              <td data-label="Precio" class="num c-preu">1,45 €</td>
+              <td class="c-estat"><span class="badge badge--esgotat">Agotado</span></td>
+              <td data-label="Actualizado" class="opt">12 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Malla naranja 15 kg</strong><small>SM-4070-NA</small></td>
+              <td data-label="Categoría">Mallas</td>
+              <td data-label="Material">Malla raschel</td>
+              <td data-label="Medidas">40×70 cm</td>
+              <td data-label="Gramaje" class="opt">30 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#D9822B"></span>Naranja</td>
+              <td data-label="Stock" class="num">9.600</td>
+              <td data-label="Precio" class="num c-preu">0,17 €</td>
+              <td class="c-estat"><span class="badge badge--actiu">Activo</span></td>
+              <td data-label="Actualizado" class="opt">15 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Saco asa troquelada</strong><small>ST-3550-VE</small></td>
+              <td data-label="Categoría">Sacos</td>
+              <td data-label="Material">Rafia PP</td>
+              <td data-label="Medidas">35×50 cm</td>
+              <td data-label="Gramaje" class="opt">80 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#5B7F4E"></span>Verde</td>
+              <td data-label="Stock" class="num estoc-baix">150</td>
+              <td data-label="Precio" class="num c-preu">0,29 €</td>
+              <td class="c-estat"><span class="badge badge--baix">Bajo stock</span></td>
+              <td data-label="Actualizado" class="opt">14 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+            <tr>
+              <td class="c-foto"><div class="foto" role="img" aria-label="Sin foto"></div></td>
+              <td class="c-nom"><strong>Saco valvulado cemento</strong><small>SV-5080-GR</small></td>
+              <td data-label="Categoría">Sacos</td>
+              <td data-label="Material">Rafia laminada</td>
+              <td data-label="Medidas">50×80 cm</td>
+              <td data-label="Gramaje" class="opt">100 g/m²</td>
+              <td data-label="Color"><span class="mostra" style="--c:#9CA3AF"></span>Gris</td>
+              <td data-label="Stock" class="num">6.700</td>
+              <td data-label="Precio" class="num c-preu">0,48 €</td>
+              <td class="c-estat"><span class="badge badge--esborrany">Borrador</span></td>
+              <td data-label="Actualizado" class="opt">10 nov</td>
+              <td class="c-accions"><button class="accio" aria-label="Ver detalles"><span class="ico ico--ver"></span><span class="text">Ver detalles</span></button><button class="accio accio--editar" aria-label="Editar"><span class="ico ico--editar"></span><span class="text">Editar</span></button><button class="accio accio--esborrar" aria-label="Borrar"><span class="ico ico--esborrar"></span></button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- PC -->
+        <nav class="paginacio" aria-label="Paginación">
+          <span>Mostrando 1–8 de 64 productos</span>
+          <div class="pagines"><a href="#" class="actual" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><a href="#">8</a></div>
+        </nav>
+      </div>
+
+      <!-- Tablet i mòbil -->
+      <button class="boto carregar-mes">Cargar más productos</button>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
